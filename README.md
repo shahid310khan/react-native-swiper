@@ -1,17 +1,3 @@
-> Hi there:
-
-[**头条财经前端团队急招**] 了解团队 / 投简历请联系: 
-
-微信: 103024979 / 邮箱: leecade@163.com
-
-「全新团队, 全新产品, 全新技术栈, 不设技术边界, 不设管理, 不装」
-
-要求: 参考头条面试标准 (重度: `Node` / `RN` / `Vue` / `React` / `微服务` 等技术向)
-
-<img style="float: left" alt="react-native-swiper" src="https://user-images.githubusercontent.com/533360/45361035-c620de00-b603-11e8-9fa7-cb7586e08b66.png" width="150">
-
-----
-
 <p align="center">
   <img alt="react-native-swiper" src="http://i.imgur.com/P4cRUgD.png" width="208">
 </p>
@@ -134,7 +120,7 @@ import {
 
 import Swiper from 'react-native-swiper';
 
-const styles = StyleSheet.create({
+var styles = StyleSheet.create({
   wrapper: {
   },
   slide1: {
@@ -162,8 +148,8 @@ const styles = StyleSheet.create({
   }
 })
 
-export default class Swiper extends Component {
-  render(){
+var swiper = React.createClass({
+  render: function() {
     return (
       <Swiper style={styles.wrapper} showsButtons={true}>
         <View style={styles.slide1}>
@@ -176,11 +162,11 @@ export default class Swiper extends Component {
           <Text style={styles.text}>And simple</Text>
         </View>
       </Swiper>
-    );
+    )
   }
-}
+})
 
-AppRegistry.registerComponent('myproject', () => Swiper);
+AppRegistry.registerComponent('myproject', () => swiper);
 ```
 
 ### Properties
@@ -203,7 +189,6 @@ AppRegistry.registerComponent('myproject', () => Swiper);
 | width | - | `number` | If no specify default enable fullscreen mode by `flex: 1`. |
 | height | - | `number` | If no specify default fullscreen mode by `flex: 1`. |
 | style | {...} | `style` | See default style in source. |
-| containerStyle | {...} | `style` | See default container style in source. |
 | loadMinimal | false | `bool` | Only load current index slide , `loadMinimalSize` slides before and after. |
 | loadMinimalSize | 1 | `number` | see `loadMinimal`   |
 | loadMinimalLoader | `<ActivityIndicator />` | `element` | Custom loader to display when slides aren't loaded
